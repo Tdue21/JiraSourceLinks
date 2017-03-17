@@ -28,32 +28,44 @@ using System.Windows.Forms;
 
 namespace SourceLinks.Plugin.Jira
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class ConfigurationDialogForm : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public ConfigurationDialogForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public JiraConnection ConnectionInfo { get; private set; }
 
-        public DialogResult ShowDialog(IWin32Window owner, JiraConnection connectionInfo)
-        {
-            PrepareDialog(connectionInfo);
-            return base.ShowDialog(owner);
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionInfo"></param>
+        /// <returns></returns>
         public DialogResult ShowDialog(JiraConnection connectionInfo)
         {
             PrepareDialog(connectionInfo);
-            return base.ShowDialog();
+            return ShowDialog();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connectionInfo"></param>
         private void PrepareDialog(JiraConnection connectionInfo)
         {
             if (connectionInfo == null)
             {
-                throw new ArgumentNullException("connectionInfo");
+                throw new ArgumentNullException(nameof(connectionInfo));
             }
 
             ServerUrlTextBox.Text = connectionInfo.ServerUrl;
@@ -61,11 +73,18 @@ namespace SourceLinks.Plugin.Jira
             PasswordTextBox.Text = connectionInfo.Password;
         }
 
-        private void DialogAcceptButton_Click(object sender, EventArgs e)
-        {
-            ConnectionInfo = GetJiraConnection();
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DialogAcceptButton_Click(object sender, EventArgs e) => ConnectionInfo = GetJiraConnection();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TestConnectionButton_Click(object sender, EventArgs e)
         {
             try
@@ -77,10 +96,14 @@ namespace SourceLinks.Plugin.Jira
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, "Connection failed: " + ex.Message, "Connection Test", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"Connection failed: {ex.Message}", "Connection Test", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private JiraConnection GetJiraConnection()
         {
             return new JiraConnection

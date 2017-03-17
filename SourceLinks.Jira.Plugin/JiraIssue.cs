@@ -25,69 +25,46 @@ using System;
 
 namespace SourceLinks.Plugin.Jira
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary>Data entity that represents a specific Jira issue.</summary>
     public class JiraIssue
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the issue key.</summary>
         public string Key { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>Gets or sets the summary text.</summary>
         public string Summary { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>Gets or sets the description.</summary>
         public string Description { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>Gets or sets the issue type.</summary>
         public string IssueType { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the priority of the issue.</summary>
         public string Priority { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the status of the issue.</summary>
         public string Status { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the name of the reporter.</summary>
         public string Reporter { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the name of the assignee.</summary>
         public string Assignee { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the date for when the issue was created.</summary>
         public DateTime Created { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the date where the issue was last updated.</summary>
         public DateTime Updated { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the date for when the issue was resolved.</summary>
         public DateTime? ResolvedDate { get; set; }
 
+        /// <inheritdoc cref="object"/>
         public override string ToString()
         {
-            return string.Format("{0} - {1}", Key, Summary);
+            return $"{Key} - {Summary}";
         }
     }
 }

@@ -22,37 +22,25 @@
 // * SOFTWARE.
 // ************************************************************************************
 
-using System;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace SourceLinks.Plugin.Jira
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary>This class represents the connection to a Jira server.</summary>
     public class JiraConnection
     {
-        /// <summary>
-        /// JIRA:VTOEM-1
-        /// </summary>
+        /// <summary>Gets or sets the Jira server url.</summary>
         public string ServerUrl { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the Jira username.</summary>
         public string Username { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Gets or sets the user password.</summary>
         public string Password { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="issueKey"></param>
-        /// <returns></returns>
+        /// <summary>Looks up an issue based on the issue key. If anything is found an <see cref="JiraIssue"/> object is returned with relevant data.</summary>
+        /// <param name="issueKey">The issue key to look up.</param>
+        /// <returns>An <see cref="JiraIssue"/> object</returns>
         public JiraIssue LoadIssue(string issueKey)
         {
             var jira = Atlassian.Jira.Jira.CreateRestClient(ServerUrl, Username, Password);
@@ -74,10 +62,13 @@ namespace SourceLinks.Plugin.Jira
             return result;
         }
 
+        /// <summary>Tests the supplied connection data in order to determine if they are correct.</summary>
         public void TestConnection()
         {
             var jira = Atlassian.Jira.Jira.CreateRestClient(ServerUrl, Username, Password);
+            // ReSharper disable once UnusedVariable
             var project = jira.GetProjects().FirstOrDefault();
+
         }
     }
 }

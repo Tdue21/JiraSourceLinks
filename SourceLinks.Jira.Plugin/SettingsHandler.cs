@@ -28,8 +28,15 @@ using WholeTomatoSoftware.SourceLinks;
 
 namespace SourceLinks.Plugin.Jira
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SettingsHandler
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public JiraConnection LoadSettings()
         {
             var result = new JiraConnection();
@@ -54,6 +61,10 @@ namespace SourceLinks.Plugin.Jira
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="connection"></param>
         public void SaveSettings(JiraConnection connection)
         {
             var hashtable = new Hashtable

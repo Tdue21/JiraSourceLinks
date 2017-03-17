@@ -95,7 +95,7 @@
     <Compile Include="ConfigurationDialogForm.Designer.cs">
       <DependentUpon>ConfigurationDialogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HashtableExtensions.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="JiraConnection.cs" />
     <Compile Include="JiraIssue.cs" />
     <Compile Include="JiraPlugin.cs" />
@@ -127,6 +127,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\PluginSDK.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

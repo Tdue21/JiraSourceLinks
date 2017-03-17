@@ -23,11 +23,23 @@
 // ************************************************************************************
 using System;
 using System.Collections;
+using System.Xml.Linq;
 
 namespace SourceLinks.Plugin.Jira
 {
-    public static class HashtableExtensions
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class ExtensionMethods
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="hashtable"></param>
+        /// <param name="key"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static T GetValue<T>(this Hashtable hashtable, string key, T defaultValue)
         {
             if (hashtable.ContainsKey(key))
@@ -37,6 +49,23 @@ namespace SourceLinks.Plugin.Jira
                 return result;
             }
             return defaultValue;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="ns"></param>
+        /// <param name="label"></param>
+        /// <param name="value"></param>
+        public static void AddElement(this XElement element, XNamespace ns, string label, string value)
+        {
+            element.Add(
+
+                new XElement(ns + "Bold", label + ": "),
+                new XText(value),
+                new XElement(ns + "LineBreak")
+            );
         }
     }
 }
