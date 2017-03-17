@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceLinks.Jira.Plugin", "SourceLinks.Jira.Plugin.csproj", "{5D1E45BF-0F21-4FCD-ABB7-069E606DC840}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".References", ".References", "{2CF66F5B-80AE-4572-8E67-1FC86B0112BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceLinks", "..\SourceLinks\SourceLinks.csproj", "{9E7471B1-FA49-41CA-BD31-C67F20A4355A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginSDK", "..\PluginSDK\PluginSDK.csproj", "{B06AB721-D410-4842-8C9F-EC6AA5DC4B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FogBugzPlugin", "..\FogBugzPlugin\FogBugzPlugin.csproj", "{6F3664D4-5885-4717-8285-9A8E4C176985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalTrackerPlugin", "..\PivotalTrackerPlugin\PivotalTrackerPlugin.csproj", "{5D8AB780-1107-412E-9831-46DDA1FED510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceLinksApiExtension", "..\PluginExample\SourceLinksApiExtension.csproj", "{7393E388-64A4-42DB-B3C6-74C8FC22A657}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D1E45BF-0F21-4FCD-ABB7-069E606DC840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1E45BF-0F21-4FCD-ABB7-069E606DC840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1E45BF-0F21-4FCD-ABB7-069E606DC840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1E45BF-0F21-4FCD-ABB7-069E606DC840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7471B1-FA49-41CA-BD31-C67F20A4355A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7471B1-FA49-41CA-BD31-C67F20A4355A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7471B1-FA49-41CA-BD31-C67F20A4355A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06AB721-D410-4842-8C9F-EC6AA5DC4B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06AB721-D410-4842-8C9F-EC6AA5DC4B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06AB721-D410-4842-8C9F-EC6AA5DC4B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3664D4-5885-4717-8285-9A8E4C176985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3664D4-5885-4717-8285-9A8E4C176985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3664D4-5885-4717-8285-9A8E4C176985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8AB780-1107-412E-9831-46DDA1FED510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8AB780-1107-412E-9831-46DDA1FED510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8AB780-1107-412E-9831-46DDA1FED510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7393E388-64A4-42DB-B3C6-74C8FC22A657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7393E388-64A4-42DB-B3C6-74C8FC22A657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7393E388-64A4-42DB-B3C6-74C8FC22A657}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E7471B1-FA49-41CA-BD31-C67F20A4355A} = {2CF66F5B-80AE-4572-8E67-1FC86B0112BA}
+		{B06AB721-D410-4842-8C9F-EC6AA5DC4B8E} = {2CF66F5B-80AE-4572-8E67-1FC86B0112BA}
+		{6F3664D4-5885-4717-8285-9A8E4C176985} = {2CF66F5B-80AE-4572-8E67-1FC86B0112BA}
+		{5D8AB780-1107-412E-9831-46DDA1FED510} = {2CF66F5B-80AE-4572-8E67-1FC86B0112BA}
+		{7393E388-64A4-42DB-B3C6-74C8FC22A657} = {2CF66F5B-80AE-4572-8E67-1FC86B0112BA}
+	EndGlobalSection
+EndGlobal
